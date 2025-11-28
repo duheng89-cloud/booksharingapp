@@ -21,10 +21,10 @@ class UserSeeder extends Seeder
     {
         // 创建管理员账户（如果不存在）
         $admin = User::firstOrCreate(
-            ['email' => 'admin@example.com'],
+            ['email' => 'admin@admin.com'],
             [
-                'name' => '管理员',
-                'password' => Hash::make('admin123'), // 默认密码：admin123
+                'name' => 'admin',
+                'password' => Hash::make('123456789'), 
                 'role' => 'admin',
                 'email_verified_at' => now(),
             ]
@@ -39,23 +39,23 @@ class UserSeeder extends Seeder
         // 创建几个普通用户账户
         $users = [
             [
-                'name' => '张三',
+                'name' => 'Zhang San',
                 'email' => 'zhangsan@example.com',
-                'password' => Hash::make('password123'), // 默认密码：password123
+                'password' => Hash::make('123456789'), 
                 'role' => 'user',
                 'email_verified_at' => now(),
             ],
             [
-                'name' => '李四',
+                'name' => 'Li Si',
                 'email' => 'lisi@example.com',
-                'password' => Hash::make('password123'),
+                'password' => Hash::make('123456789'),
                 'role' => 'user',
                 'email_verified_at' => now(),
             ],
             [
-                'name' => '王五',
+                'name' => 'Wang Wu',
                 'email' => 'wangwu@example.com',
-                'password' => Hash::make('password123'),
+                'password' => Hash::make('123456789'),
                 'role' => 'user',
                 'email_verified_at' => now(),
             ],

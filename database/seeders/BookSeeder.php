@@ -30,85 +30,50 @@ class BookSeeder extends Seeder
         // 示例图书数据
         $books = [
             [
-                'title' => 'Laravel 从入门到精通',
-                'author' => 'Taylor Otwell',
-                'isbn' => '978-7-121-12345-6',
-                'description' => '这是一本全面介绍 Laravel 框架的书籍，从基础概念到高级应用，帮助开发者快速掌握 Laravel 开发技能。',
+                'title' => 'The Let Them',
+                'author' => 'Mel Robbins,Sawyer Robbins',
+                'isbn' => '1401971369',
+                'description' => 'The Let Them Theory: A Life-Changing Tool That Millions of People Cant Stop Talking About',
                 'status' => 'approved',
                 'is_available' => true,
+                'cover_image'=>'book-covers/91ZVf3kNrcL._SY466_.jpg'
             ],
             [
-                'title' => 'PHP 现代开发实践',
-                'author' => 'Josh Lockhart',
-                'isbn' => '978-7-121-12346-3',
-                'description' => '深入探讨 PHP 现代开发的最佳实践，包括面向对象编程、设计模式、性能优化等内容。',
+                'title' => 'Dog Man: Big Jim Believes',
+                'author' => 'Dav Pilkey',
+                'isbn' => '978-1546176183',
+                'description' => 'Dog Man: Big Jim Believes: A Graphic Novel (Dog Man #14): From the Creator of Captain Underpants',
                 'status' => 'approved',
                 'is_available' => true,
+                 'cover_image'=>'book-covers/91cUuNGL-GL._SY466_.jpg'
             ],
             [
-                'title' => 'MySQL 数据库设计与优化',
-                'author' => 'Baron Schwartz',
+                'title' => 'The Primal Hunter 14',
+                'author' => 'Zogarth',
                 'isbn' => '978-7-121-12347-0',
-                'description' => '全面介绍 MySQL 数据库的设计原则、索引优化、查询优化等核心知识，适合数据库管理员和开发人员阅读。',
+                'description' => 'The Primal Hunter 14: A LitRPG Adventure Kindle',
                 'status' => 'approved',
                 'is_available' => true,
+                'cover_image'=>'book-covers/81Z+ZLon5fL._SY385_.jpg'
             ],
             [
-                'title' => 'Vue.js 3.0 实战指南',
-                'author' => 'Evan You',
-                'isbn' => '978-7-121-12348-7',
-                'description' => 'Vue.js 3.0 的完整实战教程，涵盖组合式 API、响应式系统、组件开发等核心内容。',
-                'status' => 'approved',
-                'is_available' => false, // 已借出
-            ],
-            [
-                'title' => 'JavaScript 高级程序设计',
-                'author' => 'Matt Frisbie',
-                'isbn' => '978-7-121-12349-4',
-                'description' => 'JavaScript 领域的经典教材，深入讲解 JavaScript 的核心概念和高级特性。',
+                'title' => 'Heart Life Music',
+                'author' => 'Kenny Chesney,Holly Gleason',
+                'isbn' => '978-0063423107',
+                'description' => 'Heart Life Music is a love letter to the journey: all the places I’ve gone and how we got here. This book takes you on the ride.',
                 'status' => 'approved',
                 'is_available' => true,
+                'cover_image'=>'book-covers/81-6OLc+HAL._SY385_.jpg'
             ],
-            [
-                'title' => '设计模式：可复用面向对象软件的基础',
-                'author' => 'Gang of Four',
-                'isbn' => '978-7-121-12350-1',
-                'description' => '软件设计模式的经典著作，介绍了23种常用的设计模式，是每个程序员都应该阅读的书籍。',
-                'status' => 'pending', // 待审核
-                'is_available' => true,
-            ],
-            [
-                'title' => '算法导论',
-                'author' => 'Thomas H. Cormen',
-                'isbn' => '978-7-121-12351-8',
-                'description' => '计算机科学领域的经典教材，全面系统地介绍了算法和数据结构的知识。',
+              [
+                'title' => 'Fae & Alchemy Book 3',
+                'author' => 'Callie Hart',
+                'isbn' => '978-1538774250',
+                'description' => 'The rules have all been broken. Everything has changed. Can Saeris and Fisher save their kingdom, or is it already too late? The global phenomenon and #1 New York Times bestselling Fae & Alchemy series continues…',
                 'status' => 'approved',
                 'is_available' => true,
-            ],
-            [
-                'title' => '深入理解计算机系统',
-                'author' => 'Randal E. Bryant',
-                'isbn' => '978-7-121-12352-5',
-                'description' => '从程序员的角度深入理解计算机系统的工作原理，包括程序执行、内存管理、网络编程等内容。',
-                'status' => 'approved',
-                'is_available' => true,
-            ],
-            [
-                'title' => '代码整洁之道',
-                'author' => 'Robert C. Martin',
-                'isbn' => '978-7-121-12353-2',
-                'description' => '软件工程领域的经典著作，教你如何编写清晰、可维护的代码。',
-                'status' => 'approved',
-                'is_available' => true,
-            ],
-            [
-                'title' => '重构：改善既有代码的设计',
-                'author' => 'Martin Fowler',
-                'isbn' => '978-7-121-12354-9',
-                'description' => '重构领域的权威指南，详细介绍了各种重构技巧和最佳实践。',
-                'status' => 'approved',
-                'is_available' => true,
-            ],
+                'cover_image'=>'book-covers/61HSq7zlcyL._SY385_.jpg'
+            ]
         ];
 
         // 创建图书，随机分配给用户
@@ -130,6 +95,7 @@ class BookSeeder extends Seeder
                 'description' => $bookData['description'],
                 'status' => $bookData['status'],
                 'is_available' => $bookData['is_available'],
+                'cover_image' => $bookData['cover_image'],
             ]);
             
             $createdCount++;
